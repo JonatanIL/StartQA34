@@ -5,11 +5,12 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../Tools/gradle-7.4.2" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Start_Selenium_QA34" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Tools/gradle-7.4.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Start_Selenium_QA34" />
           </set>
         </option>
       </GradleProjectSettings>
