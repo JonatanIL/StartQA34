@@ -29,9 +29,13 @@ public class HWTestRegistration {
         passwordTextBox.clear();
         passwordTextBox.sendKeys("Jj12345$");
         //click to button registration
-//
+
+
+        //1 way
 //      WebElement regbutton = wd.findElement(By.xpath("(//button[normalize-space()='Registration'])[1]"));
 //     regbutton.click();
+
+//2 way
         WebElement regbutton =wd.findElement(By.cssSelector("[class=\"login_login__3EHKB\"]>:last-child"));
         regbutton.click();
     }
