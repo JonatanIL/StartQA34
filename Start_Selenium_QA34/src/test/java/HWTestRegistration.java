@@ -9,12 +9,13 @@ import java.util.Random;
 
 public class HWTestRegistration {
     WebDriver wd;
+
     @Test
-    public void firstRegistrationSuccess(){
-        wd=new ChromeDriver();
+    public void firstRegistrationSuccess() {
+        wd = new ChromeDriver();
         wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
         //open form --> click login button
-        WebElement loginTab= wd.findElement(By.cssSelector("[href*='/login']"));
+        WebElement loginTab = wd.findElement(By.cssSelector("[href*='/login']"));
         loginTab.click();
         //fill valid email
         WebElement emailTextBx = wd.findElement(By.cssSelector("[placeholder=\"Email\"]"));
@@ -22,9 +23,9 @@ public class HWTestRegistration {
         emailTextBx.clear();
         Random randomGenerator = new Random();
         int randomInt = randomGenerator.nextInt(1000);
-        emailTextBx.sendKeys("username"+ randomInt +"@gmail.com");
+        emailTextBx.sendKeys("username" + randomInt + "@gmail.com");
         //fill valid password
-        WebElement passwordTextBox =wd.findElement(By.cssSelector("[placeholder='Password']"));
+        WebElement passwordTextBox = wd.findElement(By.cssSelector("[placeholder='Password']"));
         passwordTextBox.click();
         passwordTextBox.clear();
         passwordTextBox.sendKeys("Jj12345$");
@@ -36,9 +37,10 @@ public class HWTestRegistration {
 //     regbutton.click();
 
 //2 way
-        WebElement regbutton =wd.findElement(By.cssSelector("[class=\"login_login__3EHKB\"]>:last-child"));
+        // WebElement regbutton =wd.findElement(By.cssSelector("div.login_login__3EHKB :last-child"));
+        //WebElement regbutton =wd.findElement(By.cssSelector("button:last-child"));
+        List<WebElement> list = wd.findElements(By.cssSelector("button"));
+        WebElement regbutton = list.get(1);
         regbutton.click();
     }
-
-
 }
